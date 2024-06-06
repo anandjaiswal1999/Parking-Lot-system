@@ -16,8 +16,12 @@ public class ParkingSlotManager {
         this.parkingStrategy=parkingStrategy;
     }
 
+    public ParkingSlotManager(List<ParkingSlot> parkingSlotList) {
+        this.parkingSlots=parkingSlotList;
+    }
 
-     public ParkingSlot findParKingSlot (String vehicleType){
+
+    public ParkingSlot findParKingSlot (String vehicleType){
         return parkingStrategy.strategy(parkingSlots,vehicleType);
     }
     public void addVehicle (){};
